@@ -1,0 +1,11 @@
+name: lab4
+
+services:
+  postgres:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=lab4
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
