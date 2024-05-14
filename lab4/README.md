@@ -21,6 +21,8 @@ services:
       - POSTGRES_DB=lab4
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./scripts:/docker-entrypoint-initdb.d
 ```
 
 В качестве клиента используется DataGrip.
