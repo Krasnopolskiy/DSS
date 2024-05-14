@@ -1,0 +1,14 @@
+name: lab5
+
+services:
+  postgres:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=lab5
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./scripts:/docker-entrypoint-initdb.d
+      - ./assets:/assets
