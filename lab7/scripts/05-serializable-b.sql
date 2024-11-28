@@ -1,0 +1,12 @@
+BEGIN;
+SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
+
+SELECT price
+FROM good
+WHERE name = 'Смартфон XYZ Pro';
+
+SELECT name
+FROM good
+WHERE name = 'Ноутбук ABC Lite';
+
+COMMIT;
